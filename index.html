@@ -16,16 +16,8 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <!-- CDN  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+
     <title>KUKKA | 정기구독</title>
     <style>
       /* 홈이미지*/
@@ -99,66 +91,59 @@
   </head>
   <body>
     <!-- 네브바 -->
-    <nav
-      class="navbar navbar-expand-md navbar-light bg-light fixed-top"
-      id="nav-scroll"
-      style="word-break: keep-all"
-    >
-      <div class="container ms-5">
-        <a href="#" class="navbar-brand"
-          ><img src="image/로고.svg" alt="" />
-        </a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="image/로고.svg" alt="" style="margin-left: 50px"
+        /></a>
         <!-- 햄버거버튼 -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbar"
-          aria-controls="navbar"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse"
-          style="margin-left: 200px"
-          id="navBar"
-        >
-          <div class="d-flex justify-content-center align-items-center">
-            <ul class="navbar-nav fw-bold">
-              <li class="nav-item">
-                <a href="#market" class="nav-link">꽃시장</a>
-              </li>
-              <li class="nav-item">
-                <a href="#gift" class="nav-link">꽃선물</a>
-              </li>
-              <li class="nav-item">
-                <a href="#gallery" class="nav-link">화병/소품</a>
-              </li>
-              <li class="nav-item">
-                <a href="#class" class="nav-link">플라워클래스</a>
-              </li>
-              <li class="nav-item">
-                <a href="#contents" class="nav-link">꽃사전</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">|</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">브랜드소개</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">콘텐츠</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">기업제휴</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">비즈몰</a>
-              </li>
-            </ul>
-          </div>
+
+        <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+          <ul class="navbar-nav fw-bold" style="margin-left: 150px">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#market"
+                >꽃시장</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gift">꽃선물</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">화병/소품</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#class">플라워클래스</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contents">꽃사전</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">|</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">브랜드소개</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">콘텐츠</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">기업제휴</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">비즈몰</a>
+            </li>
+          </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="#" class="nav-link" style="font-size: x-large"
@@ -179,7 +164,6 @@
         </div>
       </div>
     </nav>
-
     <!-- 홈이미지 -->
     <!-- 캐로셀 섹션 시작 -->
     <section
