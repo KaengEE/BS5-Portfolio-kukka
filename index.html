@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 부트스트랩 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- 페비콘 -->
+    <link
+      rel="shortcut icon"
+      href="image/android-icon-192x192.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>KUKKA | 정기구독</title>
+    <style>
+      /* 홈이미지*/
+      .c-img {
+        height: 100%;
+        object-fit: cover;
+      }
+      /* 꽃시장부분 배경 검은색 */
+      section #market {
+        background-color: black;
+        width: 100%;
+      }
+
+      /* 캡션 */
+      .carousel-caption {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .c-item #caption {
+        margin: 300px;
+      }
+
+      span {
+        font-size: 30px;
+      }
+
+      /* 브레드클럼 a태그 색상변경, 밑줄 제거 */
+      #breadcrumb a {
+        color: gray;
+        text-decoration: none;
+      }
+      /* a태그 hover */
+      #breadcrumb a:hover {
+        color: white;
+        text-decoration: none;
+      }
+      /* 갤러리 */
+      #gallery {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      #gallery #hoverimage {
+        gap: 10px;
+        max-width: 80%;
+        margin: 40px 0;
+        columns: 5 310px;
+        list-style: none;
+      }
+      #gallery #hoverimage .images {
+        display: flex;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+      #gallery #hoverimage .images img {
+        width: 100%;
+        transition: transform 0.2s ease;
+      }
+      #gallery #hoverimage .images:hover img {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-md navbar-light bg-light fixed-top"
+        id="nav-scroll"
+        style="word-break: keep-all"
+      >
+        <div class="container">
+          <a href="#" class="navbar-brand"
+            ><img src="image/로고.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navBar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navBar">
+            <ul class="navbar-nav fw-bold ms-50">
+              <li class="nav-item">
+                <a href="#" class="nav-link">정기구독</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">꽃시장</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">꽃선물</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">화병/소품</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">플라워클래스</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">꽃사전</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">|</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">브랜드소개</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">콘텐츠</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">기업제휴</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">비즈몰</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"><i class="bi bi-search"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"><i class="bi bi-person"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"><i class="bi bi-bag"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 홈이미지 -->
+    <!-- 캐로셀 섹션 시작 -->
+    <section
+      id="home"
+      class="carousel slide d-flex justify-content-center"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- 가로세로버튼 -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#home"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">이전</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#home"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">다음</span>
+        </button>
+        <!-- 캐로셀1 -->
+        <div class="carousel-item active c-item">
+          <img
+            src="image/img1.jpeg"
+            class="d-block w-100 c-img"
+            alt="Slide 1"
+          />
+          <div class="carousel-caption top-0 mt-1 text-dark">
+            <p class="mt-5 md-5 fw-3">8월의 공동구매</p>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <span>백합 공동구매</span>
+              <span>백합을 한가득</span>
+              <span>안아본 적이 있나요?</span>
+            </div>
+            <p class="mt-5 md-5 fw-3">천상의 꽃, 백합 공구를 시작해요.</p>
+            <button class="btn btn-dark px-4 py-2 fs-5 mt-5">
+              공동구매 신청하기
+            </button>
+          </div>
+        </div>
+        <!-- 캐로셀2 -->
+        <div class="carousel-item c-item">
+          <img
+            src="image/img2.jpeg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+          <div class="carousel-caption top-0 mt-1 text-white">
+            <p class="mt-5 md-5 fw-3">9주년 이벤트 #4</p>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <span>99명 선착순</span>
+              <span>9주년 기념</span>
+              <span>전지점 299000 클래스</span>
+            </div>
+            <p class="mt-5 md-5 fw-3">
+              해바라기 핸드 타이드 클래스 50% 99명 특가
+            </p>
+            <button class="btn btn-dark px-4 py-2 fs-5 mt-5">
+              99명 선착순 사전신청
+            </button>
+          </div>
+        </div>
+        <!-- 캐로셀3 -->
+        <div class="carousel-item c-item">
+          <img src="image/img3.jpg" class="d-block w-100 c-img" alt="Slide 2" />
+          <div class="carousel-caption top-0 mt-1 text-dark">
+            <p class="mt-5 md-5 fw-3">Bespoke Line</p>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <span>꾸까 bespoke Line</span>
+              <span>대형 꽃다발 출시</span>
+            </div>
+            <p class="mt-5 md-5 fw-3">
+              특별한 사람을 위해 <br />
+              특별하게 제작된 감각적인 비스포크 라인
+            </p>
+            <button class="btn btn-dark px-4 py-2 fs-5 mt-5">
+              가장 먼저 보기
+            </button>
+          </div>
+        </div>
+        <!-- 캐로셀4 -->
+        <div class="carousel-item c-item">
+          <img
+            src="image/img4.jpeg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+          <div class="carousel-caption top-0 mt-1 text-white">
+            <p class="mt-5 md-5 fw-3">플라워클래스</p>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <span>20명 선착순</span>
+              <span>22만원 보조금 지원</span>
+              <span>플로리스트 마스터 과정</span>
+            </div>
+            <p class="mt-5 md-5 fw-3">96%의 만족도를 보인 정규 클래스예요!</p>
+            <button class="btn btn-dark px-4 py-2 fs-5 mt-5">신청하기</button>
+          </div>
+        </div>
+        <!-- 캐로셀5 -->
+        <div class="carousel-item c-item">
+          <img
+            src="image/img5.jpeg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+          <div class="carousel-caption top-0 mt-1 text-dark">
+            <p class="mt-5 md-5 fw-3">플라워 스토리</p>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <span>시원한 여름 휴가를</span>
+              <span>떠나고 싶다면</span>
+            </div>
+            <p class="mt-5 md-5 fw-3">
+              당장이라도 떠나고 싶은 여름 휴가 <br />
+              여름 제철 꽃으로 휴가 분위기 내보세요
+            </p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
+              방구석 휴가템 4종 보러가기
+            </button>
+          </div>
+        </div>
+        <!-- 캐로셀6 -->
+        <div class="carousel-item c-item">
+          <img
+            src="image/img6.jpeg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+          <div class="carousel-caption top-0 mt-1 text-white">
+            <p class="mt-5 md-5 fw-3">Vase Edition</p>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <span>80's Retro Edition</span>
+              <span>화병&꽃 특별 패키지</span>
+            </div>
+            <p class="mt-5 md-5 fw-3">화병 가격으로 꽃도 함께 즐기세요.</p>
+            <button class="btn btn-outline-light px-4 py-2 fs-5 mt-5">
+              제일 먼저 보기
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 캐로셀 섹션 끝 -->
+
+    <!-- 브레드크럼 -->
+
+    <nav
+      style="--bs-breadcrumb-divider: ''"
+      aria-label="breadcrumb"
+      class="container-fluid bg-dark py-2 d-flex justify-content-center"
+      id="breadcrumb"
+    >
+      <ol class="breadcrumb my-auto">
+        <li class="breadcrumb-item active" aria-current="page">
+          <a href="#sub">정기구독</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <a href="#market">꽃시장</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <a href="#gift">꽃선물</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <a href="#class">플라워클래스</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <a href="#contents">꾸까콘텐츠</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <a href="#home">전체보기</a>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- 구독혜택 -->
+    <section id="sub" class="container-fluid py-5">
+      <!-- 정기구독 -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="py-5 m-5">
+            <p class="fs-3">정기구독</p>
+            <p class="fw-3">100만명이 선택한 꽃 구독.<br />이제 시작하세요.</p>
+            <button
+              class="btn btn-outline-dark btn-sm px-5 py-2 fs-5 mt-5 word-break: keep-all;"
+            >
+              구독상품 전체보기
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card rounded">
+            <img src="image/flower1.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">파머스 믹스 구독(M)</p>
+              <h5 class="card-text">26,900원</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-s">
+          <div class="card rounded">
+            <img src="image/flower2.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">꽃다발 구독(L)</p>
+              <h5 class="card-text">40,900원</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card rounded">
+            <img src="image/flower3.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">꽃다발 구독(XL)</p>
+              <h5 class="card-text">50,900원</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 꽃시장 -->
+    <section id="market" class="container-fluid py-5 bg-dark">
+      <!-- 정기구독 -->
+      <div class="row text-white">
+        <div class="col-lg-3">
+          <div class="py-5 m-5">
+            <p class="fs-3">꽃시장</p>
+            <p class="fw-3">
+              꽃 가격의 한계를 깨다.<br />화훼 농가의 꽃을 신선하게 받으세요.
+            </p>
+            <button class="btn btn-outline-light btn-sm px-5 py-2 fs-5 mt-5">
+              꽃시장 상품 전체보기
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card rounded text-bg-dark">
+            <img src="image/market1.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">
+                여름 바다의 청량함. 아이스블루 수국_한단(1대)
+              </p>
+              <h5 class="card-text">9,900원</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-s">
+          <div class="card rounded text-bg-dark">
+            <img src="image/market2.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">
+                막대사탕처럼 달콤한, 옐로우 메리골드_반단(3대)
+              </p>
+              <h5 class="card-text">13,900원</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="card rounded text-bg-dark">
+            <img src="image/market3.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">
+                파스텔톤 수채화. 미레아 안시리움_한단(1대)
+              </p>
+              <h5 class="card-text">9,900원</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 선물 -->
+    <section id="gift" class="container-fluid py-5">
+      <!-- 꽃선물 -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="py-5 m-5">
+            <p class="fs-3">꽃선물</p>
+            <p class="fw-3">꽃 선물은 꾸까의 전문 플로리스트에게 맡기세요.</p>
+            <button class="btn btn-outline-dark btn-sm px-5 py-2 fs-5 mt-5">
+              꽃선물 전체보기
+            </button>
+          </div>
+        </div>
+        <!-- 선물1 -->
+        <div class="col-lg-3">
+          <div class="card rounded">
+            <img src="image/gift1.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">
+                [8월 탄생화] 여름 태양을 닮은 열정적인 당신에게. 해바라기 바스켓
+              </p>
+              <h5 class="card-text">
+                <p class="text-body-tertiary" style="font-size: 0.8rem">
+                  <del>73,900원</del>
+                </p>
+                <span class="text-danger" style="font-size: 0.8rem">14%</span>
+                62,900원
+              </h5>
+            </div>
+          </div>
+        </div>
+        <!-- 선물2 -->
+        <div class="col-lg-3 col-s">
+          <div class="card rounded">
+            <img src="image/gift2.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">
+                [8월 탄생화] 여름 태양을 닮은 열정적인 당신에게. 해바라기 꽃다발
+              </p>
+              <h5 class="card-text">
+                <p class="text-body-tertiary" style="font-size: 0.8rem">
+                  <del>51,900원</del>
+                </p>
+                <span class="text-danger" style="font-size: 0.8rem">13%</span>
+                44,900원
+              </h5>
+            </div>
+          </div>
+        </div>
+        <!-- 선물3 -->
+        <div class="col-lg-3">
+          <div class="card rounded">
+            <img src="image/gift3.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">
+                [기분전환] 말보다 더 큰 위로가 필요할 때, 바이올렛블라썸 꽃다발
+              </p>
+              <h5 class="card-text">
+                <p class="text-body-tertiary" style="font-size: 0.8rem">
+                  <del>38,900원</del>
+                </p>
+                <span class="text-danger" style="font-size: 0.8rem">10%</span>
+                34,900원
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 클래스 -->
+    <section id="class" class="container-fluid py-5 bg-dark">
+      <!-- 정기구독 -->
+      <div class="row text-white">
+        <div class="col-lg-4">
+          <div class="py-5 m-5">
+            <p class="fs-3">플라워클래스</p>
+            <p class="fw-3">
+              꽃을 배우는 일이 가볍고<br />쉬운일이 되도록.<br />꾸까에게 꽃을
+              배우세요.
+            </p>
+            <button class="btn btn-outline-light btn-sm px-5 py-2 fs-5 mt-5">
+              플라워클래스 전체보기
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card rounded text-bg-dark mb-5">
+            <img src="image/class1.png" alt="" />
+            <div class="card-img-overlay">
+              <p class="card-title py-2">취미클래스</p>
+              <h5 class="card-text">
+                월 4시간 다양한 꽃 스킬을 습득할 수 있는 클래스
+              </h5>
+              <h1 class="display-1 text-white-50 py-5">HOBBY CLASS</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card rounded text-bg-dark mt-5">
+            <img src="image/class2.png" alt="" />
+            <div class="card-img-overlay">
+              <p class="card-title py-2">원데이 클래스</p>
+              <h5 class="card-text">
+                가볍게 꽃을 경험하고 시작하기 좋은 클래스
+              </h5>
+              <h1 class="display-1 text-white-50 py-5">ONEDAY CLASS</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 꾸까 콘텐츠 -->
+    <section id="contents" class="container-fluid py-5 bg-secondary-subtle">
+      <!-- 콘텐츠 -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="py-5 m-5">
+            <p class="fs-3">꾸까 콘텐츠</p>
+            <p class="fw-3">
+              읽으면서 꽃을 즐기는 새로운 습관. <br />\ 꾸까 이야기를 만나세요.
+            </p>
+            <button class="btn btn-outline-dark btn-sm px-5 py-2 fs-5 mt-5">
+              콘텐츠 전체보기
+            </button>
+          </div>
+        </div>
+        <!-- 콘텐츠1 -->
+        <div class="col-lg-3">
+          <div class="card rounded">
+            <img src="image/contents1.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">수박처럼 여름 제촐 꽃이 있어요</p>
+              <button class="btn btn-outline-dark px-5 py-2 fs-5 mt-5">
+                자세히보기
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 콘텐츠2 -->
+        <div class="col-lg-3">
+          <div class="card rounded">
+            <img src="image/contents2.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">9주년 기념. 위켄드 플라워 플리마켓</p>
+              <button class="btn btn-outline-dark px-5 py-2 fs-5 mt-5">
+                자세히보기
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 콘텐츠3 -->
+        <div class="col-lg-3">
+          <div class="card rounded">
+            <img src="image/contents3.jpg" alt="" />
+            <div class="card-body">
+              <p class="card-title py-2">
+                나폴레옹의 부인, 조세핀의 꽃 다알리아
+              </p>
+              <button class="btn btn-outline-dark px-5 py-2 fs-5 mt-5">
+                자세히보기
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 이미지 hover 섹션 -->
+    <!-- 어둡게 설정 -->
+    <section id="gallery" class="container-fluid bg-dark">
+      <ul id="hoverimage">
+        <li class="images">
+          <img src="image/hoverimage1.jpg" alt="" />
+        </li>
+        <li class="images">
+          <img src="image/hoverimage2.jpg" alt="" />
+        </li>
+        <li class="images">
+          <img src="image/hoverimage3.jpg" alt="" />
+        </li>
+        <li class="images">
+          <img src="image/hoverimage4.jpg" alt="" />
+        </li>
+        <li class="images">
+          <img src="image/hoverimage5.jpg" alt="" />
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
