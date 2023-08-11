@@ -38,7 +38,6 @@
         background-color: black;
         width: 100%;
       }
-
       /* 캡션 */
       .carousel-caption {
         display: flex;
@@ -49,8 +48,8 @@
       .c-item #caption {
         margin: 300px;
       }
-
-      span {
+      /* 홈섹션 폰트크기 */
+      #home span {
         font-size: 30px;
       }
 
@@ -64,7 +63,8 @@
         color: white;
         text-decoration: none;
       }
-      /* 갤러리 */
+
+      /* 갤러리 이미지 설정 */
       #gallery {
         display: flex;
         align-items: center;
@@ -79,58 +79,68 @@
       }
       #gallery #hoverimage .images {
         display: flex;
+        height: 330px;
         cursor: pointer;
         overflow: hidden;
         position: relative;
         margin-bottom: 15px;
         border-radius: 5px;
       }
+      /* hover 설정 */
       #gallery #hoverimage .images img {
         width: 100%;
         transition: transform 0.2s ease;
       }
       #gallery #hoverimage .images:hover img {
+        filter: brightness(0.5);
         transform: scale(1.2);
       }
     </style>
   </head>
   <body>
-    <header>
-      <nav
-        class="navbar navbar-expand-md navbar-light bg-light fixed-top"
-        id="nav-scroll"
-        style="word-break: keep-all"
-      >
-        <div class="container ms-5">
-          <a href="#" class="navbar-brand"
-            ><img src="image/로고.svg" alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navBar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse d-flex justify-content-center"
-            id="navBar"
-          >
+    <!-- 네브바 -->
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light fixed-top"
+      id="nav-scroll"
+      style="word-break: keep-all"
+    >
+      <div class="container ms-5">
+        <a href="#" class="navbar-brand"
+          ><img src="image/로고.svg" alt="" />
+        </a>
+        <!-- 햄버거버튼 -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          style="margin-left: 200px"
+          id="navBar"
+        >
+          <div class="d-flex justify-content-center align-items-center">
             <ul class="navbar-nav fw-bold">
               <li class="nav-item">
-                <a href="#" class="nav-link">꽃시장</a>
+                <a href="#market" class="nav-link">꽃시장</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">꽃선물</a>
+                <a href="#gift" class="nav-link">꽃선물</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">화병/소품</a>
+                <a href="#gallery" class="nav-link">화병/소품</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">플라워클래스</a>
+                <a href="#class" class="nav-link">플라워클래스</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">꽃사전</a>
+                <a href="#contents" class="nav-link">꽃사전</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">|</a>
@@ -148,21 +158,27 @@
                 <a href="#" class="nav-link">비즈몰</a>
               </li>
             </ul>
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="#" class="nav-link"><i class="bi bi-search"></i></a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link"><i class="bi bi-person"></i></a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link"><i class="bi bi-bag"></i></a>
-              </li>
-            </ul>
           </div>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="font-size: x-large"
+                ><i class="bi bi-search"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="font-size: x-large"
+                ><i class="bi bi-person"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="font-size: x-large"
+                ><i class="bi bi-bag"></i
+              ></a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
     <!-- 홈이미지 -->
     <!-- 캐로셀 섹션 시작 -->
@@ -403,7 +419,7 @@
 
     <!-- 꽃시장 -->
     <section id="market" class="container-fluid py-5 bg-dark">
-      <!-- 정기구독 -->
+      <!-- 꽃시장 제목 -->
       <div class="row text-white">
         <div class="col-lg-3">
           <div class="py-5 m-5">
@@ -454,7 +470,7 @@
 
     <!-- 선물 -->
     <section id="gift" class="container-fluid py-5">
-      <!-- 꽃선물 -->
+      <!-- 꽃선물 제목 -->
       <div class="row">
         <div class="col-lg-3">
           <div class="py-5 m-5">
@@ -524,7 +540,7 @@
 
     <!-- 클래스 -->
     <section id="class" class="container-fluid py-5 bg-dark">
-      <!-- 정기구독 -->
+      <!-- 클래스제목 -->
       <div class="row text-white">
         <div class="col-lg-4">
           <div class="py-5 m-5">
@@ -546,7 +562,10 @@
               <h5 class="card-text">
                 월 4시간 다양한 꽃 스킬을 습득할 수 있는 클래스
               </h5>
-              <h1 class="display-1 text-white-50 py-5">HOBBY CLASS</h1>
+              <div class="d-flex flex-column py-5">
+                <span class="display-1 text-white-50">HOBBY</span>
+                <span class="display-1 text-white-50">CLASS</span>
+              </div>
             </div>
           </div>
         </div>
@@ -558,7 +577,10 @@
               <h5 class="card-text">
                 가볍게 꽃을 경험하고 시작하기 좋은 클래스
               </h5>
-              <h1 class="display-1 text-white-50 py-5">ONEDAY CLASS</h1>
+              <div class="d-flex flex-column py-5">
+                <span class="display-1 text-white-50">ONEDAY</span>
+                <span class="display-1 text-white-50">CLASS</span>
+              </div>
             </div>
           </div>
         </div>
@@ -567,7 +589,7 @@
 
     <!-- 꾸까 콘텐츠 -->
     <section id="contents" class="container-fluid py-5 bg-secondary-subtle">
-      <!-- 콘텐츠 -->
+      <!-- 콘텐츠 제목 -->
       <div class="row">
         <div class="col-lg-3">
           <div class="py-5 m-5">
@@ -622,7 +644,7 @@
     </section>
 
     <!-- 이미지 hover 섹션 -->
-    <!-- 어둡게 설정 -->
+    <!-- 위치설정 -->
     <section id="gallery" class="container-fluid bg-dark">
       <ul id="hoverimage">
         <li class="images">
