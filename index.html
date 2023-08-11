@@ -21,6 +21,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <!-- CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <title>KUKKA | 정기구독</title>
     <style>
       /* 홈이미지*/
@@ -69,7 +74,7 @@
         gap: 10px;
         max-width: 80%;
         margin: 40px 0;
-        columns: 5 310px;
+        columns: 5 50px;
         list-style: none;
       }
       #gallery #hoverimage .images {
@@ -96,7 +101,7 @@
         id="nav-scroll"
         style="word-break: keep-all"
       >
-        <div class="container">
+        <div class="container ms-5">
           <a href="#" class="navbar-brand"
             ><img src="image/로고.svg" alt="" />
           </a>
@@ -107,11 +112,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navBar">
-            <ul class="navbar-nav fw-bold ms-50">
-              <li class="nav-item">
-                <a href="#" class="nav-link">정기구독</a>
-              </li>
+          <div
+            class="collapse navbar-collapse d-flex justify-content-center"
+            id="navBar"
+          >
+            <ul class="navbar-nav fw-bold">
               <li class="nav-item">
                 <a href="#" class="nav-link">꽃시장</a>
               </li>
@@ -142,6 +147,8 @@
               <li class="nav-item">
                 <a href="#" class="nav-link">비즈몰</a>
               </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a href="#" class="nav-link"><i class="bi bi-search"></i></a>
               </li>
@@ -635,5 +642,50 @@
         </li>
       </ul>
     </section>
+
+    <!-- 푸터 -->
+    <footer class="container-fluid py-5 bg-dark text-white">
+      <section class="d-flex row-2 ms-5 me-5">
+        <!-- 왼쪽 -->
+        <div class="col-9 py-3 fs-3">
+          <div><img src="image/footerimage.svg" alt="" /></div>
+          <!-- 고객센터 -->
+          <div class="d-flex">
+            <button class="btn btn-outline-light me-3 mt-3">고객센터 ></button>
+            <div class="d-flex flex-column mt-3">
+              <span style="font-size: small">고객센터 1661-1031</span>
+              <span style="font-size: small"
+                >AM 10:00 - PX 18:00 점심시간 13:00 - 14:00(주말 & 공휴일
+                휴무)</span
+              >
+            </div>
+          </div>
+          <!-- 사업자정보 -->
+          <div style="font-size: small" class="mt-3">
+            주식회사 꾸까 | 대표자 박춘화 | 사업자 등록번호 264-81-32594 |
+            사업자정보 확인 | 서울특별시 서초구 명달로 9 방배빌딩 지하 1층 KUKKA
+            | 기업공시 | 통신판매신고번호 2018-서울서초-1692
+          </div>
+          <!-- 카피라이터 -->
+          <div style="font-size: small" class="mt-3">
+            <div>© KUKKA, Inc. All rights reserved.</div>
+          </div>
+        </div>
+        <!-- 오른쪽 -->
+        <div class="col-3 ms-auto py-3 text-end">
+          <div>
+            <i class="bi bi-instagram" style="font-size: xx-large">
+              <a href="#인스타그램주소"></a
+            ></i>
+          </div>
+          <div class="mt-3" style="font-size: small">
+            공지사항 | 배송정책 | 회원 멤버쉽
+          </div>
+          <div class="mt-3" style="font-size: small">
+            이용약관 개인정보 처리 방침
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
