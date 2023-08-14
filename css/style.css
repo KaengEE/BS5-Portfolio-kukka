@@ -1,0 +1,66 @@
+.c-img {
+  width: 100%;
+  height: 800px;
+}
+/* 꽃시장부분 배경 검은색 */
+section #market {
+  background-color: black;
+  width: 100%;
+}
+/* 캡션 */
+.carousel-caption {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.c-item #caption {
+  margin: 300px;
+}
+/* 홈섹션 폰트크기 */
+#home span {
+  font-size: 30px;
+}
+
+/* 브레드클럼 a태그 색상변경, 밑줄 제거 */
+#breadcrumb a {
+  color: gray;
+  text-decoration: none;
+}
+/* a태그 hover */
+#breadcrumb a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* 갤러리 이미지 설정 */
+#gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#gallery #hoverimage {
+  gap: 10px;
+  max-width: 80%;
+  margin: 40px 0;
+  columns: 5 50px;
+  list-style: none;
+}
+#gallery #hoverimage .images {
+  display: flex;
+  height: 330px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+/* hover 설정 */
+#gallery #hoverimage .images img {
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+#gallery #hoverimage .images:hover img {
+  filter: brightness(0.5);
+  transform: scale(1.2);
+}
